@@ -1,0 +1,18 @@
+
+
+
+
+<ce folder="The_name_of_your_CustomTypes">
+                <file name="Replace_with_your_types.xml" type="types" />
+</ce>
+
+
+
+
+
+
+<ce folder="Replace_with_your_ce">
+		<file name="Replace_with_your_types.xml" type="types" />
+		<file name="Replace_with_your_cfgspawnabletypes.xml" type="spawnabletypes" />
+		<file name="Replace_with_your_events.xml" type="events" />
+</ce>

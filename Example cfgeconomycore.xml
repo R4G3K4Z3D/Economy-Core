@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<economycore>
+	<classes>
+		<!--
+These are rootclasses to be used by economy.
+Do not forget to add attribute act="character", if root class represents character (player, infected, animal)
+Do not forget to add attribute act="car", if root class represents moveable vehicles
+-->
+		<rootclass name="DefaultWeapon" />
+		<!-- weapons -->
+		<rootclass name="DefaultMagazine" />
+		<!-- magazines -->
+		<rootclass name="Inventory_Base" />
+		<!-- inventory items -->
+		<rootclass name="HouseNoDestruct" reportMemoryLOD="no" />
+		<!-- houses, wrecks -->
+		<rootclass name="SurvivorBase" act="character" reportMemoryLOD="no" />
+		<!-- player characters -->
+		<rootclass name="DZ_LightAI" act="character" reportMemoryLOD="no" />
+		<!-- infected, animals -->
+		<rootclass name="CarScript" act="car" reportMemoryLOD="no" />
+		<!-- cars (sedan, hatchback, transitBus, V3S, ...) -->
+		<rootclass name="BoatScript" act="boat" reportMemoryLOD="no" />
+		<!-- boats -->
+	</classes>
+	<defaults>
+		<default name="dyn_radius" value="30" />
+		<default name="dyn_smin" value="0" />
+		<default name="dyn_smax" value="0" />
+		<default name="dyn_dmin" value="3" />
+		<default name="dyn_dmax" value="7" />
+		<default name="log_ce_loop" value="false"/>
+		<default name="log_ce_dynamicevent" value="false"/>
+		<default name="log_ce_vehicle" value="false"/>
+		<default name="log_ce_lootspawn" value="false"/>
+		<default name="log_ce_lootcleanup" value="false"/>
+		<default name="log_ce_lootrespawn" value="false"/>
+		<default name="log_ce_statistics" value="false"/>
+		<default name="log_ce_zombie" value="false"/>
+		<default name="log_storageinfo" value="false"/>
+		<default name="log_hivewarning" value="true"/>
+		<default name="log_missionfilewarning" value="true"/>
+		<default name="save_events_startup" value="true"/>
+		<default name="save_types_startup" value="true"/>
+	</defaults>                                                                    //   FROM THIS LINE UP IS VANILLA cfgeconomycore.xml - IF YOU REMOVE WHATS BELOW, LEAVE THE </economycore> - THAT ENDS THE FILE.
+	<ce folder="CustomTypes">                                                      //   NAME OF YOUR CUSTOM TYPES FOLDER
+		<!-- Single Types -->                                                        //   COMMENTED OUT SECTION USE <!--   -->
+		<file name="Line_I_Use_to_copy.xml" type="types" />                          //   COPY THIS WHOLE LINE AND PASTE IT RIGHT UNDERNEATH, THEN REPLACE THE Line_I_Use_to_copy WITH YOUR TYPES FILE NAME
+		<file name="Codelock_Types.xml" type="types" />                              //   SINGLE TYPES FROM THE MOD CODELOCK
+		<file name="BBP_types.xml" type="types" />                                   //   SINGLE TYPES FROM THE MOD BASE BUILDING PLUS (BBP)
+		<file name="RFFSHelis_Types.xml" type="types" />                             //   SINGLE TYPES FROM THE MOD RED FALCON HELI'S
+	</ce>                                                                          //   YOU MUST HAVE THIS </CE> AFTER THE END OF ANYTHING YOU ADD LIKE IN THE EXAMPLE - IT ENDS THAT SECTION
+	<ce folder="CustomTypes/BlacksBBP">                                            //   NAME OF YOUR CUSTOM TYPES FOLDER WITH A / THEN THE NAME OF THE FOLDER THAT YOU PUT INSIDE THE CUSTOM TYPES, THIS ONE BEING BLACKS BBP INTERIORS. IN THE BLACKS FOLDER THERE ARE FIVE TYPES.
+		<!-- Types In Blacks BBP Interiors -->                    
+		<file name="CARPETtypes.xml" type="types" />
+		<file name="MURALtypes.xml" type="types" />
+		<file name="NewBBPTypes.xml" type="types" />
+		<file name="PLASTERtypes.xml" type="types" />
+		<file name="WALLPAPERtypes.xml" type="types" />
+	</ce>
+	<!-- Expansion Bundle -->
+	<ce folder="expansion_ce">                                                      //   NAME OF FOLDER OUTSIDE OF THE CUSTOM TYPES FOLDER- DOESN'T HAVE THE CUSTOMTYPES/ THEN THE NAME. JUST THE NAME OF THE FOLDER EXACTLY HOW THE FOLDER SPELLS IT.
+		<file name="expansion_types.xml" type="types" />                              //   SINGLE TYPES INSIDE THE expansion_ce FOLDER
+		<file name="expansion_spawnabletypes.xml" type="spawnabletypes" />            //   SINGLE SPAWNABLETYPES INSIDE THE expansion_ce FOLDER
+		<file name="expansion_events.xml" type="events" />                            //   SINGLE EVENTS INSIDE THE expansion_ce FOLDER
+	</ce>
+</economycore>
